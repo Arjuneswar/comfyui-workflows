@@ -3,8 +3,6 @@
 **One line:** Replaces the performer in a source video with a different character, keeping the
 original motion, timing and audio intact.
 
-![node graph](graph.png)
-
 ## The problem
 
 Reshooting a performance with a different character means another shoot. The alternative —
@@ -77,22 +75,26 @@ and stitched, and pose continuity across the seam is the open problem.
 softens; too low and the original performer bleeds through. Strength 1.0 with a clean,
 well-lit, full-body reference was more reliable than tuning strength against a weak reference.
 
+<!-- TODO: fill these in and uncomment. Hidden for now so the rendered page
+     shows nothing unfinished.
+
 ## Where it's used / results
 
-*(Fill in: production or experimental, how many shots, who ran it, whether anyone other than
-you ran it unattended — that last one is the reliability signal.)*
+Production or experimental? How many shots? Who ran it — and did anyone other
+than you run it unattended? That last one is the reliability signal.
 
 ## My role
 
-*(Fill in: built the graph / adapted an existing VACE template / which parts are yours. If the
-published result sits on a collaborator's profile, say so here and credit them.)*
+Built the graph from scratch, or adapted an existing VACE template? Which parts
+are yours? If the published result sits on a collaborator's profile, say so here
+and credit them.
+
+-->
 
 ## Files
 
-- `workflow.json` — UI format, import into ComfyUI
-- `workflow_api.json` — API format, for `tools/batch_runner.py`
-- `graph.png` — node graph screenshot
-- `samples/` — source clip, reference image, output
+- `workflow.json` — ComfyUI UI format. Drag onto the canvas, or **Workflow → Open**.
+- `samples/output-with-audio.mp4` — example output, with the source audio passed through.
 
 ## Requirements
 

@@ -1,0 +1,9 @@
+# Normalize text in the repo, check out native. Keeps workflow JSON diffs clean.
+*.json  text eol=lf
+*.md    text eol=lf
+
+# Never touch binaries
+*.mp4   binary
+*.png   binary
+*.jpg   binary
+*.safetensors binary
