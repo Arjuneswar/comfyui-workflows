@@ -3,6 +3,10 @@
 **One line:** Replaces the performer in a source video with a different character, keeping the
 original motion, timing and audio intact.
 
+> **I did not build this workflow.** The node graph in `workflow.json` is someone else's
+> work. What is mine is this write-up — tracing what each node does and why the settings
+> are what they are. The original author is credited in [Credits](#credits).
+
 ## The problem
 
 Reshooting a performance with a different character means another shoot. The alternative —
@@ -55,7 +59,9 @@ labelled comparison strip — a review artifact for the client, not part of the 
 - T5 text encoder offloaded after encoding
 - Tiled VAE decode
 
-## What was hard
+## The non-obvious parts
+
+Reading this graph, four things look wrong until you understand why they are not.
 
 **Nine steps at CFG 1.0 is not a typo.** FusioniX is a distilled/CausVid-style variant, so it
 denoises in single-digit steps with guidance effectively off. Coming from standard diffusion
@@ -75,21 +81,19 @@ and stitched, and pose continuity across the seam is the open problem.
 softens; too low and the original performer bleeds through. Strength 1.0 with a clean,
 well-lit, full-body reference was more reliable than tuning strength against a weak reference.
 
-<!-- TODO: fill these in and uncomment. Hidden for now so the rendered page
-     shows nothing unfinished.
+## Credits
 
-## Where it's used / results
+The workflow graph is not my work and I make no claim to it. It is reproduced here with
+the documentation I wrote while working through it.
 
-Production or experimental? How many shots? Who ran it — and did anyone other
-than you run it unattended? That last one is the reliability signal.
+<!-- TODO: name the original author and link the source — Civitai, a GitHub repo, the
+     WanVideoWrapper examples folder, a Discord or Reddit post, whichever it came from.
+     Until this is filled in the credit above is incomplete, which is the one thing on
+     this page worth fixing first. -->
 
-## My role
-
-Built the graph from scratch, or adapted an existing VACE template? Which parts
-are yours? If the published result sits on a collaborator's profile, say so here
-and credit them.
-
--->
+<!-- TODO, optional: "Where it's used / results" — production or experimental, how many
+     shots, and whether anyone other than you has run it unattended. That last one is the
+     reliability signal. Uncomment as a section once there is something to say. -->
 
 ## Files
 

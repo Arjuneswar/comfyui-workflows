@@ -1,8 +1,11 @@
 # ComfyUI Workflows
 
-Video workflows for [ComfyUI](https://github.com/comfyanonymous/ComfyUI), each with notes on
-*why* the graph is built the way it is — the settings that look like mistakes but aren't, and
-the constraints that shaped the design.
+Annotated [ComfyUI](https://github.com/comfyanonymous/ComfyUI) video workflows — the graph
+plus notes on *why* it is built the way it is: the settings that look like mistakes but
+aren't, and the constraints behind them.
+
+**On authorship:** the graphs collected here are not all mine, and some are not mine at all.
+Each workflow's README says who built it. The write-ups are mine unless noted.
 
 ## Workflows
 
@@ -14,7 +17,7 @@ the constraints that shaped the design.
 
 ```
 workflows/<name>/
-├── README.md      how it works, what was hard, requirements
+├── README.md      how it works, credits, requirements
 ├── workflow.json  ComfyUI UI format — drag onto the canvas to import
 └── samples/       example output
 ```
@@ -25,6 +28,5 @@ Open the workflow folder's README first: it lists the checkpoints, the custom no
 the memory-management settings the graph depends on. Missing custom nodes show up as red
 nodes on import; missing checkpoints as empty model dropdowns.
 
-Everything here targets a single consumer GPU, so the graphs lean on block swapping, model
-offloading and tiled VAE decode. Those are the first knobs to change when moving to different
-hardware.
+These graphs target a single consumer GPU, so they lean on block swapping, model offloading
+and tiled VAE decode. Those are the first knobs to change when moving to different hardware.
