@@ -83,13 +83,24 @@ well-lit, full-body reference was more reliable than tuning strength against a w
 
 ## Credits
 
-The workflow graph is not my work and I make no claim to it. It is reproduced here with
-the documentation I wrote while working through it.
+**The workflow graph is not my work and I make no claim to it.** I make no claim to its
+licence either. Only the documentation on this page is mine.
 
-<!-- TODO: name the original author and link the source — Civitai, a GitHub repo, the
-     WanVideoWrapper examples folder, a Discord or Reddit post, whichever it came from.
-     Until this is filled in the credit above is incomplete, which is the one thing on
-     this page worth fixing first. -->
+I have not been able to trace the original author. If it is yours, or you recognise it,
+please open an issue and I will credit it properly — or take it down if you would rather
+it were not mirrored here.
+
+What the file itself records about where it came from, for anyone trying to trace it:
+
+| | |
+|---|---|
+| Authored against | `ComfyUI-WanVideoWrapper` @ [`5a23836`](https://github.com/kijai/ComfyUI-WanVideoWrapper/commit/5a2383621a05825d0d0437781afcb8552d9590fd) |
+| | `ComfyUI-VideoHelperSuite` @ [`0a75c79`](https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite/commit/0a75c7958fe320efcb052f1d9f8451fd20c730a8) |
+| | `comfy-core` 0.3.26, frontend 1.49.6 |
+| Internal graph id | `c6e410bc-5e2c-460b-ae81-c91b6094fbb1` |
+
+Those pinned commits date the graph, which narrows the search; the node group is titled
+"Control with Reference".
 
 <!-- TODO, optional: "Where it's used / results" — production or experimental, how many
      shots, and whether anyone other than you has run it unattended. That last one is the
